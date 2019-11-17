@@ -4,7 +4,7 @@
 body { 
 	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
-	background-image: url('../images/pastel.png');
+	background-image: url('../images/straw.png');
 	background-size: cover;
 	
 }
@@ -209,7 +209,7 @@ animation:rainbow 1s infinite;
 
 
 @media only screen and (min-width:768px){
-	
+
 
 }
 
