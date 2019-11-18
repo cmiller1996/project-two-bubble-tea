@@ -1,97 +1,105 @@
-/* Enter your Styles below! */
+body
+  background: #eee
+  min-height: 3000px
+  padding: 0
+  margin: 0
+  font-family: 'Open Sans', sans-serif
 
+.container
+  width: 80%
+  margin: 0 auto
+  clear: both
+  
+a
+  display: inline-block
+  color: #333
+  text-decoration: none
+  
+  
+nav
+  background: #fff
+  height: 80px
+  line-height: 80px
+  box-shadow: 1px 1px 1px rgba(0, 0,0, 0.2)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9998
+  transition: all 0.5s
+  &.scrollUp
+    transform: translateY(-80px)
+  
+  ul.navbar-menu
+    margin: 0
+    padding: 0
+    display: inline-block
+    float: right
+    
+    li
+      display: inline-block
+      margin: 0 10px
+      a
+        color: #666
+        font-size: 14px
+        
+  a#brand
+    text-transform: uppercase
+    foat: left
+    font-weight: 800
+    font-size: 20px
+    
+  button
+    background: none
+    width: 30px
+    height: 40px
+    margin-top: 20px
+    border: none
+    float: right
+    display: inline-block
+    cursor: pointer
+    display: none
 
-body { 
-	font-family: 'Oswald', sans-serif;
-	font-size: 16px;
-	background-image: url('../images/straw.png');
-	background-size: cover;
-	
-}
+    span
+      width: 30px
+      height: 40px
+      height: 2px
+      background: #333
+      display: block
+      margin: 5px 0
+      
+    
 
-hr{
-}
+@media (max-width: 768px)
+  nav ul.navbar-menu
+    display: none
+  nav button
+    display: block
+    
+    
+    
+    $(document).ready(function () {
+  
+  'use strict';
+  
+   var c, currentScrollTop = 0,
+       navbar = $('nav');
 
-footer{
-	text-align:center;
-}	 
-
-h1, h2, h3, h4 {
-	font-family: 'Oswald', sans-serif;
-}
-
-h1 {
-	margin-bottom: 20px;	
-	font-weight: bold;
-	font-size: 36px;
-}
-
-h2 {
-	margin-bottom: 20px;	
-	font-weight: bold;
-	font-size: 36px;
-}
-
-
-blockquote {
-	margin: 20px 60px;
-	font-family: Helvetica, sans-serif;
-}
-
-header {margin-bottom: 20px;}
-
-nav li {
-	width: 100%;
-	font-family: Helvetica, sans-serif;
-	font-size: 24px;
-	list-style-type: none;
-	flex:1;
-}
-
-.logo-mobile {
-	display: inline-block;
-	width:120px;
-}
-
-.flexy .logo { 
-	flex: 1;
-	margin-right: 40px;
-	 }
-
-.flexy li{
-	list-style-type: none;
-	flex:1;
-	align-items: center;
-	justify-content: center;
-	white-space: nowrap;
-}
-
-
-.flexy{
-	width: 90%;
-	margin: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-direction: column;
-
-}
-
-
-
-.logo-desktop {
-	width: 120px;
-	display: none;
-
-}
-
-.info li{
-	list-style-type: none;
-	display: inline-block;
-	text-align: center;
-	padding:20px;
-	padding-left: 300px;
-}
+   $(window).scroll(function () {
+      var a = $(window).scrollTop();
+      var b = navbar.height();
+     
+      currentScrollTop = a;
+     
+      if (c < currentScrollTop && a > b + b) {
+        navbar.addClass("scrollUp");
+      } else if (c > currentScrollTop && !(a <= b)) {
+        navbar.removeClass("scrollUp");
+      }
+      c = currentScrollTop;
+  });
+  
+});
 
 
 
@@ -116,75 +124,6 @@ p {
 	border-radius: 50%;
 }
 
-.bar img{
-	width:300%;
-	padding-top: 40px;	
-	padding-bottom: 40px;
-}
-
-a { 
-	color: black;
-	text-decoration: none;
-	 }
-a:hover {
--webkit-animation:rainbow 1s infinite;
--ms-animation:rainbow 1s infinite;
--o-animation:rainbow 1s infinite;
-animation:rainbow 1s infinite;
-}
-@-webkit-keyframes rainbow {
-0% {color: #ff0000;}
-10% {color: #ff8000;}
-20% {color: #ffff00;}
-30% {color: #80ff00;}
-40% {color: #00ff00;}
-50% {color: #00ff80;}
-60% {color: #00ffff;}
-70% {color: #0080ff;}
-80% {color: #0000ff;}
-90% {color: #8000ff;}
-100% {color: #ff0080;}
-}
-@-ms-keyframes rainbow {
-0% {color: #ff0000;}
-10% {color: #ff8000;}
-20% {color: #ffff00;}
-30% {color: #80ff00;}
-40% {color: #00ff00;}
-50% {color: #00ff80;}
-60% {color: #00ffff;}
-70% {color: #0080ff;}
-80% {color: #0000ff;}
-90% {color: #8000ff;}
-100% {color: #ff0080;}
-}
-@-o-keyframes rainbow {
-0% {color: #ff0000;}
-10% {color: #ff8000;}
-20% {color: #ffff00;}
-30% {color: #80ff00;}
-40% {color: #00ff00;}
-50% {color: #00ff80;}
-60% {color: #00ffff;}
-70% {color: #0080ff;}
-80% {color: #0000ff;}
-90% {color: #8000ff;}
-100% {color: #ff0080;}
-}
-@keyframes rainbow {
-0% {color: #ff0000;}
-10% {color: #ff8000;}
-20% {color: #ffff00;}
-30% {color: #80ff00;}
-40% {color: #00ff00;}
-50% {color: #00ff80;}
-60% {color: #00ffff;}
-70% {color: #0080ff;}
-80% {color: #0000ff;}
-90% {color: #8000ff;}
-100% {color: #ff0080;}
-}
-
 .grid-home {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -194,13 +133,13 @@ animation:rainbow 1s infinite;
 }
 
 .grid-home div {
-	background-color: none;
+	background-color: pink;
 	padding: 20px;
 }
 
 .grid-bubbletea{
 	display: grid;
-	grid-template-columns:  1fr;
+	grid-template-columns: 1fr;
 	grid-gap: 40px;
 	width: 80%;
 	margin: auto;
@@ -210,47 +149,14 @@ animation:rainbow 1s infinite;
 
 @media only screen and (min-width:768px){
 
-
 }
 
 @media only screen and (min-width:1024px){
-.flexy .logo-desktop { 
-	display: inline-block;
-	flex: 1;
-	margin-right: 40px;
-	 }
-.flexy li{
-	flex:1;
-}
-
-.logo-mobile {display: none;}
-
-.flexy{
-	width: 60%;
-	margin: auto;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-
-}
 
 
 
-.logo {
-	width: 120px;
-}
-	.grid-home{
-			grid-template-columns: 1fr 1fr;
-			width: 80%;
-		}
-	.grid-bubbletea{
-			grid-template-columns: 1fr 1fr 1fr;
-			width: 80%;
 
-		}
 
-}
 
 @media only screen and (min-width:1200px){
 
