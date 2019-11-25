@@ -2,6 +2,8 @@
 
 
 
+
+
 body {
 	background: #00b4ff;
 	color: #333;
@@ -251,8 +253,7 @@ body {
 
 .tea{
 	width: 120%;
-	padding-top: 60px;
-	margin-right: 90px;
+	padding-right:80px;
 }
 
 .bagel{
@@ -265,10 +266,10 @@ body {
 }
 
 body { 
-	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
-	background-image: url('../images/pastel.png');
+	background-image: url('../images/back.jpg');
 	background-size: cover;
+
 	
 }
 
@@ -278,23 +279,27 @@ hr{
 }
 
 footer{
+		font-family: 'Kanit', sans-serif;
 	padding-top: 40px;
 	text-align:center;
 }	 
 
 h1, h2, h3, h4 {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Kanit', sans-serif;
+
 }
 
 h1 {
+
 	margin-bottom: 20px;	
 	font-weight: bold;
 	font-size: 36px;
 }
 
 h2 {
+	padding-top: 50px;
 	margin-bottom: 20px;	
-	font-weight: bold;
+	font-weight: bolder;
 	font-size: 36px;
 }
 
@@ -308,7 +313,8 @@ header {margin-bottom: 20px;}
 
 nav li {
 	width: 100%;
-	font-family: Helvetica, sans-serif;
+		font-family: 'Kanit', sans-serif;
+	font-weight: bold;
 	font-size: 24px;
 	list-style-type: none;
 	flex:1;
@@ -352,11 +358,14 @@ nav li {
 }
 
 .info li{
+	font-family: 'Kanit', sans-serif;
 	list-style-type: none;
+	font-size: 20px;
 	display: inline-block;
 	text-align: center;
 	padding:20px;
-	padding-left: 300px;
+	padding-left: 250px;
+	font-weight: bold;
 }
 
 
@@ -367,11 +376,22 @@ div ul.flavors{
 }
 
 .flavors{
+	color: #003f80;
+	mix-blend-mode: difference;
+	padding-left: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Kanit', sans-serif;
 	line-height: 200%;
 }
 
+
 p {
+	color: #003f80;
 	line-height: 150%;
+	font-family: 'Kanit', sans-serif;
+	font-weight: bolder;
+
 }
 
 .button{
@@ -383,7 +403,11 @@ p {
 
 /* ensures that your images stretch the width of their containers */
 .home { 
-	width: 100%;
+	width: 60%;
+}
+
+.homie{
+	padding-top: 40px;
 }
 
 .bar img{
@@ -516,6 +540,7 @@ animation:rainbow 1s infinite;
 	.grid-bubbletea{
 			grid-template-columns: 1fr 1fr 1fr;
 			width: 80%;
+			grid-gap:40px;
 
 		}
 
