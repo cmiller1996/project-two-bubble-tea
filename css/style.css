@@ -257,7 +257,7 @@ body {
 }
 
 .bagel{
-	width:90%;
+	width:110%;
 }
 
 .bahn{
@@ -267,7 +267,7 @@ body {
 
 body { 
 	font-size: 16px;
-	background-image: url('../images/back.jpg');
+	background-image: url('../images/back2.jpeg');
 	background-size: cover;
 
 	
@@ -376,7 +376,7 @@ div ul.flavors{
 }
 
 .flavors{
-	color: #003f80;
+	color: black;
 	mix-blend-mode: difference;
 	padding-left: 20px;
 	font-size: 18px;
@@ -387,7 +387,7 @@ div ul.flavors{
 
 
 p {
-	color: #003f80;
+	color:black;
 	line-height: 150%;
 	font-family: 'Kanit', sans-serif;
 	font-weight: bolder;
