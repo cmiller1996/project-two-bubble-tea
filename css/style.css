@@ -404,6 +404,30 @@ p {
 /* ensures that your images stretch the width of their containers */
 .home { 
 	width: 60%;
+	  animation : effects 3s linear infinite;
+ 		backface-visibility : hidden;
+  		animation-delay : 2s;}
+
+  		@keyframes effects{
+  0%{
+    transform : rotateY(0deg);
+  }
+  25%{
+    transform : rotateY(360deg);
+  }
+  50%{
+    transform : scaleX(1.2);
+  }
+  65%{
+    transform : scaleY(1.2);
+  }
+  80%{
+    transform : rotateZ(-20deg);
+  }
+  100%{
+    transform : rotateZ(10deg);
+  }
+}
 }
 
 .homie{
